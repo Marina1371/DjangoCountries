@@ -5,14 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<h1>{{ countryModel.name }}</h1>
+
+<a href="{% url 'countries' %}">Countries</a>
+
+<h1>{{ country.country }}</h1>
 
 <ul>
-{% for l in langs %}
-<li>
-    {{ l }}
-</li>
-{% endfor %}
+    {%  for language in country.languages %}
+    <li>{{ language }}</li>
+    {% endfor %}
 </ul>
+
 </body>
 </html>

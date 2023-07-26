@@ -5,9 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+<a href="{%  url 'languages' %}">Languages</a>
+<h1>Count</h1>
 <ol>
     {% for country in countries %}
-    <li><a href="{% url 'country' country.code %}">{{country.name}}</a></li>
+    <li><a href="{% url 'country' country.country %}">{{country.country}}</a></li>
     {% endfor %}
 </ol>
 
