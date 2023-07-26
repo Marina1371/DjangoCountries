@@ -1,11 +1,18 @@
 from django.shortcuts import render
 import json
 
+from .models import Country
+
 
 def index(request):
     # read json
     with open('country.json') as json_countries:
         data = json.load(json_countries)
+        for d in data:
+            c = Country()
+            c.country_name = d['country']
+            c.country_lang = ""
+            c.save()
         return render(request, 'pages/index.html', {"countries": data})
 
 

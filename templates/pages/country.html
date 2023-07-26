@@ -8,11 +8,13 @@
 
 <a href="{% url 'countries' %}">Countries</a>
 
-<h1>{{ country.country }}</h1>
+<h1>{{ country.country_name }}</h1>
+
+lang list
 
 <ul>
-    {%  for language in country.languages %}
-    <li>{{ language }}</li>
+    {%  for language in langs %}
+    <li>{{ language.name }}</li>
     {% endfor %}
 </ul>
 

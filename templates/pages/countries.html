@@ -9,7 +9,7 @@
 <h1>Count</h1>
 <ol>
     {% for country in countries %}
-    <li><a href="{% url 'country' country.country %}">{{country.country}}</a></li>
+    <li><a href="{% url 'country' country.country_name %}">{{country.country_name}}</a></li>
     {% endfor %}
 </ol>
 
