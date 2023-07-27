@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Countries by {{letter}}</h1>
+
+<ol>
+    {% for country in countries %}
+    <li><a href="{% url 'country' country.country_name %}">{{country.country_name}}</a></li>
+    {% endfor %}
+</ol>
+{% endblock %}

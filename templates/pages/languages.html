@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Languages</title>
-</head>
-<body>
-<a href="{% url 'countries' %}">Countries</a>
+{% extends 'base.html' %}
+{% block content %}
 <h1>Languages</h1>
+
+
 <ol>
   {% for language in languages %}
-  <li>{{language.name}}</li>
+  <li><a href="{% url 'language' language.name %}">{{language.name}}</a></li>
   {% endfor %}
 </ol>
-</body>
-</html>
+{% endblock %}
